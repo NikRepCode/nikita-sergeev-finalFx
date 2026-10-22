@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nikitasergeevfinalfx.HelloController"
+            style="-fx-font-size: 18px;">
+
+    <VBox alignment="CENTER" spacing="12" AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="URL:" prefWidth="110" textFill="#00FF00"/>
+            <TextField fx:id="urlField" prefWidth="350" prefHeight="30"
+                       style="-fx-background-color: black; -fx-text-fill: #00FF00; -fx-border-color: #00FF00;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="User:" prefWidth="110" textFill="#00FF00"/>
+            <TextField fx:id="userField" prefWidth="350" prefHeight="30"
+                       style="-fx-background-color: black; -fx-text-fill: #00FF00; -fx-border-color: #00FF00;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="Password:" prefWidth="110" textFill="#00FF00"/>
+            <PasswordField fx:id="passwordField" prefWidth="350" prefHeight="30"
+                           style="-fx-background-color: black; -fx-text-fill: #00FF00; -fx-border-color: #00FF00;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button text="Подключиться" onAction="#checkConnect" style="-fx-translate-x: 120;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 15 0 0 0;">
+            <Label text="Поиск:" prefWidth="80" textFill="#00FF00"/>
+            <TextField fx:id="searchField" prefWidth="200" prefHeight="30" promptText="Введите имя..."
+                       style="-fx-background-color: black; -fx-text-fill: #00FF00; -fx-prompt-text-fill: #008800; -fx-border-color: #00FF00;"/>
+            <Button fx:id="searchButton" text="Найти" onAction="#getSearchResults" disable="true"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 10 0 0 0;">
+            <Button text="Очистить" onAction="#clearFields" style="-fx-translate-x: 90;"/>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="30">
+            <TableView fx:id="resultTable" prefWidth="660" prefHeight="720" style="-fx-font-size: 14px;">
+                <columns>
+                    <TableColumn fx:id="colFirstName" text="Имя" prefWidth="100"/>
+                    <TableColumn fx:id="colLastName" text="Фамилия" prefWidth="110"/>
+                    <TableColumn fx:id="colChar" text="Описание" prefWidth="260"/>
+                    <TableColumn fx:id="colMarital" text="Семейное положение" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <ImageView fx:id="pirateImageView" fitWidth="500" fitHeight="500" preserveRatio="true"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
