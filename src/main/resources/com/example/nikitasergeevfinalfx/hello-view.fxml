@@ -51,7 +51,7 @@
         </HBox>
 
         <HBox alignment="CENTER" spacing="30">
-            <TableView fx:id="resultTable" prefWidth="660" prefHeight="720" style="-fx-font-size: 14px;">
+            <TableView fx:id="resultTable" prefWidth="700" prefHeight="800" style="-fx-font-size: 14px;">
                 <columns>
                     <TableColumn fx:id="colFirstName" text="Имя" prefWidth="100"/>
                     <TableColumn fx:id="colLastName" text="Фамилия" prefWidth="110"/>
@@ -60,7 +60,7 @@
                 </columns>
             </TableView>
 
-            <ImageView fx:id="pirateImageView" fitWidth="500" fitHeight="500" preserveRatio="true"/>
+            <ImageView fx:id="pirateImageView" fitWidth="500" fitHeight="400" preserveRatio="true"/>
         </HBox>
 
     </VBox>
